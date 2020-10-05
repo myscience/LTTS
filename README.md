@@ -29,7 +29,7 @@ a delayed XOR computation given two inputs.
 ![Temporal XOR](figure/Figure5.png)
 
 We tested our system on a real-life task: the generation of a 56-dimensional
-walking dynamics. Our system was trained for $150ms$ and tested on $600ms$, thus
+walking dynamics. Our system was trained for 150ms and tested on 600ms, thus
 providing strong evidence of the generalization capabilities of this model.
 
 ![Figure 4](figure/Figure4.png)
