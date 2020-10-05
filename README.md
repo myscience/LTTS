@@ -1,6 +1,6 @@
 # Spike Pattern Based Learning (SPBL)
 This is the Spike Pattern Based Learning (SPBL) repository for code associated to
-the PLOS ONE paper: "*Target spiking patterns enable efficient and biologically plausible learning for complex temporal tasks - track changes*".
+the PLOS ONE paper: "*Target spiking patterns enable efficient and biologically plausible learning for complex temporal tasks*".
 
 The model is implemented in the `spbl.py` module. A graphical depiction of the
 system architecture is offered in the Figure below.
@@ -42,7 +42,7 @@ providing strong evidence of the generalization capabilities of this model.
 We tested our model on a smaller version of the 3D trajectory task to illustrate how
 our model achieves very fast convergence to good solutions. We also compare the
 performance of the *online approximation* to the exact gradient and found how it
-is beneficial for performances. 
+is beneficial for performances.
 
 ![Figure 3](figure/Figure3.png)
 
