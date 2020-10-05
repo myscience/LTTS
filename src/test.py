@@ -1,3 +1,15 @@
+'''
+    This is the Learning Through Target Spikes (LTTS) repository for code associated to
+    the paper: Paolo Muratore, Cristiano Capone, Pier Stanislao Paolucci (2020)
+    "Target spike patterns enable efficient and biologically plausible learning for
+     complex temporal tasks*" (currently *under review*).
+
+    Please give credit to this paper if you use or modify the code in a derivative work.
+    This work is licensed under the Creative Commons Attribution 4.0 International License.
+    To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+    or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+'''
+
 import numpy as np
 import utils as ut
 from ltts import LTTS
