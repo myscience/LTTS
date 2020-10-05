@@ -38,6 +38,14 @@ providing strong evidence of the generalization capabilities of this model.
 
 ![Figure 4](figure/Figure4.png)
 
+### Fast convergence
+We tested our model on a smaller version of the 3D trajectory task to illustrate how
+our model achieves very fast convergence to good solutions. We also compare the
+performance of the *online approximation* to the exact gradient and found how it
+is beneficial for performances. 
+
+![Figure 3](figure/Figure3.png)
+
 ### Robustness to Noise
 To asses the robustness of our model to noise we corrupt the input current with
 a zero mean Gaussian noise of increasing variance. Indeed our voltage-dependent
