@@ -3,7 +3,7 @@ import utils as ut
 from tqdm import trange
 from optimizer import Adam
 
-class KIM:
+class SPBL:
     """
         This is the Kinetic Ising Model class which represent a recurrent network
         of binary {0, 1} stochastic spiking units with intrinsic potential. A

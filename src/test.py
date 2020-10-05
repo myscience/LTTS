@@ -1,6 +1,6 @@
 import numpy as np
 import utils as ut
-from kim import KIM
+from spbl import SPBL
 
 # Here we define the parameters of our model
 N = 500;
@@ -26,7 +26,7 @@ par = {'tau_m' : tau_m, 'tau_s' : tau_s, 'tau_ro' : tau_ro, 'beta_ro' : beta_ro,
    'dv' : dv, 'alpha' : alpha, 'alpha_rout' : alpha_rout, 'Vo' : Vo, 'h' : h, 's_inh' : s_inh,
    'N' : N, 'T' : T, 'dt' : dt, 'offT' : offT};
 
-kim = KIM ((N, T), par);
+spbl = SPBL ((N, T), par);
 
 # Here we set up the 3-Trajectory Task
 P = ut.kTrajectory (T, K = 3, offT = offT, norm = True);
@@ -39,11 +39,11 @@ Iteach = np.matmul(Jteach, P);
 Iclock = np.matmul(Jclock, C);
 
 S_init = np.zeros (N);
-S_targ = kim.compute (Iteach + Iclock, init = S_init);
+S_targ = spbl.compute (Iteach + Iclock, init = S_init);
 
 # Here we train our model
-J_rout, track = kim.train (S_targ, Iclock, out = P, epochs = 1000, track = True);
+J_rout, track = spbl.train (S_targ, Iclock, out = P, epochs = 1000, track = True);
 
 # Here we save the results of our training
 np.save ("Trained Model.npy", np.array ([P, C, Iteach, Iclock, J_rout, S_targ,
-                                        kim.J, par, track], dtype = np.object));
+                                        spbl.J, par, track], dtype = np.object));
