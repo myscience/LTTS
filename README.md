@@ -1,6 +1,6 @@
 # Learning Through Target Spikes (LTTS)
 This is the Learning Through Target Spikes (LTTS) repository for code associated to
-the PLOS ONE paper: "*Target spiking patterns enable efficient and biologically plausible learning for complex temporal tasks*".
+the paper: "*Target spiking patterns enable efficient and biologically plausible learning for complex temporal tasks*" (currently *under review*).
 
 The model is implemented in the `ltts.py` module. A graphical depiction of the
 system architecture is offered in the Figure below.
