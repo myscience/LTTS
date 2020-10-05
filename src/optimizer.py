@@ -2,13 +2,14 @@ import numpy as np
 
 # This is a very simple class to implement the Adam Optimizer
 class Adam:
-    def __init__ (self, alpha = .03, beta_1 = 0.9, beta_2 = 0.999, epsilon = 1e-8, drop = 0.8):
+    def __init__ (self, alpha = .03, beta_1 = 0.9, beta_2 = 0.999, epsilon = 1e-8,
+                  drop = 0.8, drop_time = 5000):
         self.alpha = alpha;
         self.beta_1 = beta_1;
         self.beta_2 = beta_2;
         self.epsilon = epsilon;
         self.drop = drop;
-        self.drop_time = 10000;
+        self.drop_time = drop_time;
 
         self.m = 0.;
         self.v = 0.;
@@ -39,6 +40,9 @@ class Adam:
         theta = init;
 
         for t in range (1, t_max):
+            if t % self.drop_time == 0:
+                self.alpha *= self.drop;
+
             g_t = grad (theta, *args);
 
             # First we update the first and second moment gradient estimate
