@@ -5,7 +5,7 @@ the PLOS ONE paper: "*Target spiking patterns enable efficient and biologically 
 The model is implemented in the `spbl.py` module. A graphical depiction of the
 system architecture is offered in the Figure below.
 
-![Model](figure/final_model.png)
+![Model](figure/Final_Model.png)
 
 ## How to Run the Code
 The code is written in Python `3.7` and for correct execution the program requires
