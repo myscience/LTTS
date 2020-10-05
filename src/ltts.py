@@ -17,7 +17,7 @@ from optimizer import Adam
 
 class LTTS:
     """
-        This is the Kinetic Ising Model class which represent a recurrent network
+        This is the base Model class which represent a recurrent network
         of binary {0, 1} stochastic spiking units with intrinsic potential. A
         nove target-based training algorithm is used to perform temporal sequence
         learning via likelihood maximization.
