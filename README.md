@@ -1,8 +1,8 @@
-# Spike Pattern Based Learning (SPBL)
-This is the Spike Pattern Based Learning (SPBL) repository for code associated to
+# Learning Through Target Spikes (LTTS)
+This is the Learning Through Target Spikes (LTTS) repository for code associated to
 the PLOS ONE paper: "*Target spiking patterns enable efficient and biologically plausible learning for complex temporal tasks*".
 
-The model is implemented in the `spbl.py` module. A graphical depiction of the
+The model is implemented in the `ltts.py` module. A graphical depiction of the
 system architecture is offered in the Figure below.
 
 ![Model](figure/Final_Model.png)
