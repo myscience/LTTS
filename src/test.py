@@ -12,7 +12,7 @@
 
 import numpy as np
 import utils as ut
-from ltts import LTTS
+from ltts import CuLTTS
 
 # Here we define the parameters of our model
 N = 500;
@@ -38,7 +38,7 @@ par = {'tau_m' : tau_m, 'tau_s' : tau_s, 'tau_ro' : tau_ro, 'beta_ro' : beta_ro,
    'dv' : dv, 'alpha' : alpha, 'alpha_rout' : alpha_rout, 'Vo' : Vo, 'h' : h, 's_inh' : s_inh,
    'N' : N, 'T' : T, 'dt' : dt, 'offT' : offT};
 
-ltts = LTTS ((N, T), par);
+ltts = CuLTTS ((N, T), par);
 
 # Here we set up the 3-Trajectory Task
 P = ut.kTrajectory (T, K = 3, offT = offT, norm = True);
@@ -54,7 +54,7 @@ S_init = np.zeros (N);
 S_targ = ltts.compute (Iteach + Iclock, init = S_init);
 
 # Here we train our model
-J_rout, track = ltts.train (S_targ, Iclock, out = P, epochs = 1000, track = True);
+J_rout, track = ltts.train ([S_targ], [Iclock], out = [P], epochs = 1000, track = True);
 
 # Here we save the results of our training
 np.save ("Trained Model.npy", np.array ([P, C, Iteach, Iclock, J_rout, S_targ,
