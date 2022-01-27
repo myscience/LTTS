@@ -9,7 +9,7 @@ Please give credit to this paper if you use or modify the code in a derivative w
 ## The Model
 
 The model is implemented in the `ltts.py` module. A graphical depiction of the
-system architecture is offered in the Figure below.
+system architecture is offered in the Figure below. 
 
 ![Model](figure/Final_Model.png)
 
