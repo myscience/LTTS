@@ -54,7 +54,7 @@ S_init = np.zeros (N);
 S_targ = ltts.compute (Iteach + Iclock, init = S_init);
 
 # Here we train our model
-J_rout, track = ltts.train ([S_targ], [Iclock], out = [P], epochs = 1000, track = True);
+J_rout, track = ltts.train ([S_targ], [Iclock], outs = [P], epochs = 1000, track = True);
 
 # Here we save the results of our training
 np.save ("Trained Model.npy", np.array ([P, C, Iteach, Iclock, J_rout, S_targ,
